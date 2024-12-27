@@ -2163,114 +2163,69 @@
 
   .img-fluid {
     width: 40pc;
-}
-
-.footer-bg
-{
-  background: #669bbc;
-}
-
-/*BARRA NAVEGACION DISPOSITIVOS PEQUENOS*/
-
-.navbarPequenios {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #f8f9fa;
-  padding: 10px 20px;
-  position: relative;
-}
-
-.navbar-brand-Pequenios {
-  display: flex;
-  align-items: center;
-  position: fixed;
-}
-
-.navbar-logo-Pequenios {
-  height: 40px;
-  margin-right: 10px;
-}
-
-.navbar-caption-Pequenios {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #000;
-}
-
-.navbar-toggler-Pequenios {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 20px;
-  width: 30px;
-}
-
-.hamburger-Pequenios {
-  background-color: #000;
-  height: 3px;
-  width: 100%;
-  transition: transform 0.3s ease;
-  position: relative;
-}
-
-.hamburger-Pequenios::after,
-.hamburger-Pequenios::before {
-  content: "";
-  background-color: #000;
-  height: 3px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  transition: transform 0.3s ease;
-}
-
-.hamburger-Pequenios::before {
-  top: -8px;
-}
-
-.hamburger-Pequenios::after {
-  top: 8px;
-}
-
-
-.navbar-link-Pequenios {
-  padding: 10px;
-  text-decoration: none;
-  color: #000;
-  border-bottom: 1px solid #eee;
-  text-align: center;
-}
-
-.navbar-link-Pequenios:last-child {
-  border-bottom: none;
-}
-
-.navbar-link-Pequenios:hover {
-  background-color: #f0f0f0;
-}
-
-.navbar-menu-Pequenios {
-  display: none;
-  flex-direction: column;
-  background-color: #fff;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-menu-Pequenios.active {
-  display: flex;
-}
-
-@media (min-width: 992px) {
-  .navbarPequenios {
-      display: none !important;
   }
-}
+  .footer-bg
+  {
+  background: #669bbc;
+  }
+
+  /* Estilos para el toggle y el menú desplegable en pantallas pequeñas */
+  .navbarPequenios {
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    z-index: 1000; /* Asegura que se mantenga encima de otros elementos */
+  }
+  .navbar-brand-Pequenios {
+      display:flex;
+      align-items: center;
+      justify-content: start;
+  }
+  .navbar-logo-Pequenios {
+      height: 40px;
+      margin-right: 10px;
+      padding-right: 1pc;
+  }
+  .navbar-caption-Pequenios {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+  }
+  /* Botón toggle */
+  .navbar-toggler-Pequenios {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 3pc;
+    height: 5pc;
+    float: right;
+    margin-left: auto; 
+    padding-top: 18px;
+  }
+  .hamburger-Pequenios {
+      width: 100%;
+      height: 4px;
+      background-color: #333;
+      margin: 3px 0;
+  }
+  .navbar-link-Pequenios {
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      border-bottom: 1px solid #9b9b9b;
+      display: block;
+  }
+  .navbar-link-Pequenios:hover {
+      background-color: #388e88;
+      color: #f0ffee;
+  }

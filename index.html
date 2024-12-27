@@ -28,15 +28,6 @@
                     <span class="navbar-logo"><a href="#"><img src="imagenes/Português_com_Eva.png" alt="Logo"></a></span>
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="#">Português Com Eva</a></span>
                 </div>
-    
-                <button class="navbar-toggler ms-auto mb-2 mb-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                 </div>
-                </button>
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown ms-auto" data-app-modern-menu="true">
@@ -50,17 +41,23 @@
                 </div>
             </div>
         </nav>
-        <nav class="navbarPequenios d-lg-none">
+ 
+         <!-- Menú para pantallas pequeñas -->
+         <nav class="navbarPequenios d-lg-none">
             <div class="navbar-brand-Pequenios">
                 <a href="#">
                     <img src="imagenes/Português_com_Eva.png" alt="Logo" class="navbar-logo-Pequenios">
                 </a>
                 <a href="#" class="navbar-caption-Pequenios">Português Com Eva</a>
             </div>
+            <!-- Toggle button -->
             <button class="navbar-toggler-Pequenios" id="menu-toggle-Pequenios">
                 <span class="hamburger-Pequenios"></span>
+                <span class="hamburger-Pequenios"></span>
+                <span class="hamburger-Pequenios"></span>
             </button>
-            <div class="navbar-menu-Pequenios" id="navbar-menu-Pequenios">
+            <!-- Menú desplegable -->
+            <div class="navbar-menu-Pequenios" id="navbar-menu-Pequenios" style="display: none;">
                 <a class="navbar-link-Pequenios" href="./docs/Formulario.html">Inscríbete Ahora Mismo</a>
                 <a class="navbar-link-Pequenios" href="#call-to-action-1-ux3Lunchgo">Sobre Nuestra Profesora</a>
                 <a class="navbar-link-Pequenios" href="#team-1-ux3LunbSkJ">Nuestros Alumnos</a>
@@ -68,6 +65,17 @@
             </div>
         </nav>
     </section>
+    <script>
+        // Lógica para desplegar y ocultar el menú
+        document.getElementById('menu-toggle-Pequenios').addEventListener('click', function() {
+            const menu = document.getElementById('navbar-menu-Pequenios');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block'; // Muestra el menú
+            } else {
+                menu.style.display = 'none'; // Oculta el menú
+            }
+        });
+    </script>
     
     
     
