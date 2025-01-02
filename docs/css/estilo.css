@@ -2229,3 +2229,58 @@
       background-color: #388e88;
       color: #f0ffee;
   }
+
+/*Estilo para boton whatsapp*/
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px; 
+      width: 5pc;  
+      height: 5pc;  
+      z-index: 999; 
+  }
+  .whatsapp-container {
+      position: fixed;
+      bottom: 3pc;
+      right: 4pc;
+      display: inline-block;
+      width: 5pc;
+      height: 5pc;
+  }
+  .whatsapp-tooltip {
+      visibility: hidden;
+      width: 250px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 10px;
+      position: absolute;
+      bottom: 90px; 
+      right: 5pc; 
+      transform: translateX(50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 14px;
+  }
+
+  /* Mostrar el tooltip cuando el cursor está encima */
+  .whatsapp-container:hover .whatsapp-tooltip {
+      visibility: visible;
+      opacity: 1;
+  }
+  /* Estilos responsivos */
+  @media (max-width: 600px) {
+      .whatsapp-button {
+          width: 20px;
+          height: 20px;
+          bottom: 10px;
+          right: 10px;
+      }
+  }
+  @media (max-width: 400px) {
+      .whatsapp-button {
+          width: 20px;
+          height: 20px;
+      }
+  }

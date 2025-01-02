@@ -1,93 +1,128 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
-    <title>Formulario de registro</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Formulario de Registro</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../codigo/css/Formulario.css">
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .card-registration {
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      .card-body {
+        padding: 2rem;
+      }
+      .btn-formulario {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: white;
+        width: 100%;
+      }
+      .img-fluid {
+        border-top-left-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+      }
+      .section-btn {
+        text-align: center;
+      }
+      .form-outline label {
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <section class="h-100 bg-dark">
-        <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col">
-              <div class="card card-registration my-4">
-                <div class="row g-0">
-                  <div class="col-xl-6 d-none d-xl-block">
-                    <img src="https://i.pinimg.com/736x/30/8a/8a/308a8ac619bcba1114192968e1d13654.jpg"
-                      alt="Sample photo" class="img-fluid"
-                      width="50000"
-                      style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
-                  </div>
-                  <div class="col-xl-6">
-                    <div class="card-body p-md-5 text-black">
-                      <h3 class="mb-5 tex">Registrate y aprende este hermoso idioma!!!</h3>
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-12 col-lg-9">
+            <div class="card card-registration my-4">
+              <div class="row g-0">
+                <div class="col-xl-6 d-none d-xl-block">
+                  <img src="https://i.pinimg.com/736x/30/8a/8a/308a8ac619bcba1114192968e1d13654.jpg"
+                    alt="Sample photo" class="img-fluid" />
+                </div>
+                <div class="col-xl-6">
+                  <form action="./php/registroEstudiantes.php" method="POST" class="form-with-styler" data-form-title="Formulario de Registro">
+                    <div class="row">
+                      <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">
+                        ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.
+                      </div>
+                      <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                        Oops...! Algo salió mal. Por favor, inténtalo de nuevo.
+                      </div>
+                    </div>
+                    <div class="card-body text-black">
+                      <h3 class="mb-5 text-center">¡Regístrate y aprende este hermoso idioma!</h3>
 
-      
                       <div class="row">
                         <div class="col-md-12 mb-4">
-                          <div data-mdb-input-init class="form-outline">
-                            <label class="form-label" for="form3Example1m">Nombres</label>
-                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                          <div class="form-outline">
+                            <label class="form-label" for="nombres">Nombres</label>
+                            <input type="text" id="nombres" name="nombres" class="form-control form-control-lg" required />
                           </div>
                         </div>
                         <div class="col-md-12 mb-4">
-                          <div data-mdb-input-init class="form-outline">
-                            <label class="form-label" for="form3Example1n">Apellidos</label>
-                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                          <div class="form-outline">
+                            <label class="form-label" for="apellidos">Apellidos</label>
+                            <input type="text" id="apellidos" name="apellidos" class="form-control form-control-lg" />
                           </div>
                         </div>
                         <div class="col-md-3 mb-4">
-                          <div data-mdb-input-init class="form-outline">
-                            <label class="form-label" for="form3Example1n">Edad</label>
-                            <input type="number" id="form3Example1n" class="form-control form-control-lg" />
+                          <div class="form-outline">
+                            <label class="form-label" for="edad">Edad</label>
+                            <input type="number" id="edad" name="edad" class="form-control form-control-lg" required />
                           </div>
                         </div>
                       </div>
 
-                      <div data-mdb-input-init class="form-outline mb-4">
-                        <label class="form-label" for="form3Example8">Email</label>
-                        <input type="text" id="form3Example8" class="form-control form-control-lg" />
-                      </div>
-      
-                      <div class="row">
-                        <div class="col-md-12 mb-4">
-                            <label class="form-label" for="form3Example1n1">¿Por qué quieres aprender portugués Brasilero?</label>
-                          <div data-mdb-input-init class="form-outline">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                          </div>
-                        </div>
-                      </div>
-    
-                      <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
-      
-                        <h6 class="mb-0 me-4">Genero: </h6>
-      
-                        <div class="form-check form-check-inline mb-0 me-4">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                            value="option1" />
-                          <label class="form-check-label" for="femaleGender">Mujer</label>
-                        </div>
-      
-                        <div class="form-check form-check-inline mb-0 me-4">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                            value="option2" />
-                          <label class="form-check-label" for="maleGender">Hombre</label>
-                        </div>
-      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="form-control form-control-lg" required />
                       </div>
 
-                      <p class="mt-5 pt-5">Si quieres contactarnos o saber mas de las clases, puedes escribirnos y encantados te responderemos a cualquiera de tus dudas.</p>
-                      <strong class="">Contactanos por Whatsapp:</strong>
-                      <div class="container text-center mt-5">
-                        <a href="https://wa.me/59176470508" class="btn btn-success" target="_blank">
-                            Enviar mensaje por WhatsApp
-                        </a>
-                    </div>
+                      <div class="row mb-4">
+                        <div class="col-md-12">
+                          <label class="form-label" for="motivo">¿Por qué quieres aprender portugués brasileño?</label>
+                          <select name="motivo" id="motivo" class="form-control form-control-lg" required>
+                            <option value="turista">Turista</option>
+                            <option value="estudio_profesion">Estudio/Profesión</option>
+                            <option value="gustos">Por qué me gusta el idioma</option>
+                            <option value="otraRazon">Otra razón</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-check form-check-inline mb-4">
+                        <label class="form-check-label mr-4">Género:</label>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="genero" id="mujer" value="mujer" required />
+                          <label class="form-check-label" for="mujer">Mujer</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="genero" id="hombre" value="hombre" required />
+                          <label class="form-check-label" for="hombre">Hombre</label>
+                        </div>
+                      </div>
+
+                      <div class="section-btn">
+                        <button type="submit" class="btn btn-formulario display-4">Enviar</button>
+                      </div>
+                    </form>
+
+                    <p class="mt-5 text-center">Si quieres contactarnos o saber más sobre las clases, puedes escribirnos y con gusto te responderemos a cualquier duda.</p>
+                    <strong>Contáctanos por WhatsApp:</strong>
+                    <div class="text-center mt-5">
+                      <a href="https://wa.me/59176470508" class="btn btn-success" target="_blank">
+                        Enviar mensaje por WhatsApp
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -95,10 +130,12 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
