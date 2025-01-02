@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  .card-registration {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .card-body {
+    padding: 2rem;
+  }
+  .btn-formulario {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    width: 100%;
+  }
+  .img-fluid {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+  }
+  .section-btn {
+    text-align: center;
+  }
+  .form-outline label {
+    font-weight: bold;
+  }
