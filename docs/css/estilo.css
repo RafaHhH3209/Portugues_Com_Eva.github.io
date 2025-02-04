@@ -505,15 +505,9 @@
   }
   
   .img_header {
-    min-width: 100px;
-    z-index: 1000;
-    justify-content: right; 
-    position: absolute; 
-    top: 10; 
-    left: 0;
-    right: 0; 
-    padding: 0;
-    background-color: transparent;
+    position: relative;
+    width: 500px; /* Ajusta según el tamaño del video */
+    height: 500px; /* Ajusta según el tamaño del video */
   }
   @media (max-width: 768px) {
     .img_header {
@@ -536,20 +530,22 @@
       padding: 3px;
     }
   }
-  .cid-ux3LumNri2 .img_header02 {
-    width: 50%; /* Ajusta el tamaño de la imagen */
-    min-width: 10px; /* Tamaño mínimo */
-    position: absolute; /* Posiciona la imagen de forma absoluta */
-    bottom: 0; /* Sitúa la imagen en la parte inferior */
-    right: 0; /* Alinea la imagen al lado derecho */
-    padding: 0; /* Elimina márgenes innecesarios */
-    margin: 10px; /* Opcional: Agrega un margen para separarla de los bordes */
-}
 
-
-
-
-
+  .img_header02 img
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el espacio */
+    z-index: -1; /* Envía la imagen al fondo */
+  }
+  @media (max-width: 768px) {
+    .img_header02 {
+      display: none;
+    }
+  }
 
    /* TRANSFORMA TU APRENDIZAJE */
   .cid-ux3LumS54n {
@@ -2334,3 +2330,4 @@
           height: 20px;
       }
   }
+
