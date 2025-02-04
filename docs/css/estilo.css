@@ -140,9 +140,9 @@
 
   .btn-white,
   .btn-white:active {
-    background-color: #7fbff4 !important;
-    border-color: #7fbff4 !important;
-    color: #fffcfc !important;
+    background-color:  #fad758  !important;
+    border-color:  #fad758  !important;
+    color: #000000 !important;
     box-shadow: none;
   }
   .btn-white:hover,
@@ -150,7 +150,7 @@
   .btn-white.focus,
   .btn-white.active {
     color: inherit;
-    background-color: #4e7593 !important;
+    background-color: #aff6ff !important;
     border-color: #aff6ff !important;
     box-shadow: none;
   }
@@ -259,10 +259,10 @@
   }
 
   .mbr-section-btn .btn:not(.btn-form) {
-    border-radius: 100px;
+    border-radius: 1px;
   }
   .nav-tabs .nav-link {
-    border-radius: 100px !important;
+    border-radius: 1px !important;
   }
 
   a,
@@ -325,13 +325,13 @@
   }
   .mbr-section-btn .btn,
   .mbr-section-btn-main .btn {
-    padding: 4px 20px;
-    border-radius: 110px !important;
+    padding: 5px 20px;
+    border-radius: 0px !important;
     flex-direction: row-reverse;
   }
   .mbr-section-btn .btn .mbr-iconfont,
   .mbr-section-btn-main .btn .mbr-iconfont {
-    margin: 0 8px 0 0;
+    margin: 0 10px 0 0;
   }
   .mbr-section-btn .btn:hover,
   .mbr-section-btn-main .btn:hover,
@@ -422,11 +422,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 9pc 50px;
+    padding: 10pc 50px;
   }
   @media (max-width: 768px) {
     .cid-ux3LumNri2 .content-wrapper {
-      padding: 46px 20px;
+      padding: 10px;
     }
   }
   .cid-ux3LumNri2 .content-wrapper img {
@@ -441,7 +441,7 @@
   .cid-ux3LumNri2 .content-wrapper .title-wrapper {
     position: relative;
     z-index: 1;
-    margin-bottom: 250px;
+    margin-bottom: 30px;
   }
   @media (max-width: 992px) {
     .cid-ux3LumNri2 .content-wrapper .title-wrapper {
@@ -465,7 +465,7 @@
   }
   .cid-ux3LumNri2 .content-wrapper .content-wrap .icon-wrapper {
     display: block;
-    margin-bottom: 108px;
+    margin-bottom: 18px;
   }
   @media (max-width: 992px) {
     .cid-ux3LumNri2 .content-wrapper .content-wrap .icon-wrapper {
@@ -473,11 +473,11 @@
     }
   }
   .cid-ux3LumNri2 .mbr-section-title {
-    color: #f6ff00;
+    color: #000000;
   }
   .cid-ux3LumNri2 .mbr-desc {
     color: #000000;
-    text-align: center;
+    text-align: left;
   }
   .cid-ux3LumNri2 .mbr-text,
   .cid-ux3LumNri2 .text-wrap {
@@ -485,8 +485,8 @@
     text-align: center;
   }
   .cid-ux3LumNri2 .mbr-name {
-    color: #ffffff;
-    text-align: center;
+    color: #000000;
+    text-align: left;
   }
   .cid-ux3LumNri2 .mbr-role {
     color: #ffffff;
@@ -496,8 +496,58 @@
   .cid-ux3LumNri2 .mbr-section-title,
   .cid-ux3LumNri2 .mbr-section-btn,
   .cid-ux3LumNri2 .icon-wrapper {
-    text-align: center;
+    text-align: left;
   }
+  .cid-ux3LumNri2
+  {
+    background: #53bb34 ;
+    display: flex;
+  }
+  
+  .img_header {
+    min-width: 100px;
+    z-index: 1000;
+    justify-content: right; 
+    position: absolute; 
+    top: 10; 
+    left: 0;
+    right: 0; 
+    padding: 0;
+    background-color: transparent;
+  }
+  @media (max-width: 768px) {
+    .img_header {
+      display: none;
+   }
+   .cid-ux3LumNri2 .mbr-desc {
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    }
+    .cid-ux3LumNri2 .mbr-name {
+      color: #000000;
+      text-align: center;
+      padding: 10px;
+    }
+    .cid-ux3LumNri2 .mbr-section-title,
+    .cid-ux3LumNri2 .mbr-section-btn,
+    .cid-ux3LumNri2 .icon-wrapper {
+      text-align: center;
+      padding: 3px;
+    }
+  }
+  .cid-ux3LumNri2 .img_header02 {
+    width: 50%; /* Ajusta el tamaño de la imagen */
+    min-width: 10px; /* Tamaño mínimo */
+    position: absolute; /* Posiciona la imagen de forma absoluta */
+    bottom: 0; /* Sitúa la imagen en la parte inferior */
+    right: 0; /* Alinea la imagen al lado derecho */
+    padding: 0; /* Elimina márgenes innecesarios */
+    margin: 10px; /* Opcional: Agrega un margen para separarla de los bordes */
+}
+
+
+
 
 
 
@@ -535,7 +585,7 @@
   .cid-ux3LumS54n .content-wrapper .text-wrapper .mbr-text {
     display: inline-flex;
     width: 40%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   @media (max-width: 992px) {
     .cid-ux3LumS54n .content-wrapper .text-wrapper .mbr-text {
