@@ -508,6 +508,7 @@
     position: relative;
     width: 500px; /* Ajusta según el tamaño del video */
     height: 500px; /* Ajusta según el tamaño del video */
+    z-index: 10;
   }
   @media (max-width: 768px) {
     .img_header {
@@ -539,7 +540,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ajusta la imagen para cubrir todo el espacio */
-    z-index: -1; /* Envía la imagen al fondo */
+    z-index: -0.5; /* Envía la imagen al fondo */
+    opacity: 0.2;
   }
   @media (max-width: 768px) {
     .img_header02 {
@@ -1345,7 +1347,7 @@
     margin: 0;
     justify-content: center;
     padding: 60px 16px;
-    background-color: #f3f6f9;
+    background-color: #f5eb7d;
     border-radius: 20px !important;
   }
   @media (max-width: 992px) {
@@ -2279,16 +2281,16 @@
 /*Estilo para boton whatsapp*/
     .whatsapp-button {
       position: fixed;
-      bottom: 20px;
-      right: 20px; 
-      width: 5pc;  
-      height: 5pc;  
+      bottom: 16px;
+      right: 16px; 
+      width: 3pc;  
+      height: 3pc;  
       z-index: 999; 
   }
   .whatsapp-container {
       position: fixed;
       bottom: 3pc;
-      right: 4pc;
+      right: 3pc;
       display: inline-block;
       width: 5pc;
       height: 5pc;
@@ -2300,7 +2302,7 @@
       color: #fff;
       text-align: center;
       border-radius: 5px;
-      padding: 10px;
+      padding: 9px;
       position: absolute;
       bottom: 90px; 
       right: 5pc; 
@@ -2331,3 +2333,32 @@
       }
   }
 
+ /* .img_redefinition
+ {
+  position: absolute;
+  bottom: -100;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el espacio 
+  z-index: -0.5; /* Envía la imagen al fondo 
+  opacity: 0.9;
+ } */
+
+ .background-card
+ {
+  background-color: #fff;
+  padding: 10px 10px 6pc 10px;
+ }
+ .videos-reproductor
+ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .alinear-texto
+ {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+ }
