@@ -1,112 +1,157 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Formulario de Registro</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="formularioEstilo.css">
-  </head>
-  <body>
-    <section class="h-100 bg-dark">
-      <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12 col-md-12 col-lg-9">
-            <div class="card card-registration my-4">
-              <div class="row g-0">
-                <div class="col-xl-6 d-none d-xl-block">
-                  <img src="https://i.pinimg.com/736x/30/8a/8a/308a8ac619bcba1114192968e1d13654.jpg"
-                    alt="Sample photo" class="img-fluid" />
-                </div>
-                <div class="col-xl-6">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Formulario de Registro</title>
 
-                  <form method="POST" class="form-with-styler" data-form-title="Formulario de Registro">
-                    <div class="row">
-                      <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">
-                        ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.
-                      </div>
-                      <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                        Oops...! Algo salió mal. Por favor, inténtalo de nuevo.
-                      </div>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="formularioEstilo.css">
+</head>
+
+<body>
+  <section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-12 col-lg-9">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="https://i.pinimg.com/736x/30/8a/8a/308a8ac619bcba1114192968e1d13654.jpg" alt="Sample photo"
+                  class="img-fluid" />
+              </div>
+              <div class="col-xl-6">
+
+                <form name="my-google-sheet" id="my-google-sheet" method="POST" class="form-with-styler"
+                  data-form-title="Formulario de Registro" id="miFormulario">
+                  <div class="row">
+                    <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">
+                      ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.
                     </div>
-                    <div class="card-body text-black">
-                      <h3 class="mb-5 text-center">¡Regístrate y aprende este hermoso idioma!</h3>
-
-                      <div class="row">
-                        <div class="col-md-12 mb-4">
-                          <div class="form-outline">
-                            <label class="form-label" for="nombres">Nombres</label>
-                            <input type="text" id="nombres" name="nombres" class="form-control form-control-lg" placeholder="Ingrese su nombre" required />
-                          </div>
-                        </div>
-                        <div class="col-md-12 mb-4">
-                          <div class="form-outline">
-                            <label class="form-label" for="apellidos">Apellidos</label>
-                            <input type="text" id="apellidos" name="apellidos" class="form-control form-control-lg" placeholder="Ingrese sus apellidos"/>
-                          </div>
-                        </div>
-                        <div class="col-md-12 mb-4">
-                          <div class="form-outline">
-                            <label class="form-label" for="edad">Fecha de Nacimiento</label>
-                            <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="form-control form-control-lg" required/>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="form-outline mb-4">
-                        <label class="form-label" for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" class="form-control form-control-lg" required placeholder="Ingrese su correo Electrónico"/>
-                      </div>
-
-                      <div class="row mb-4">
-                        <div class="col-md-12">
-                          <label class="form-label" for="motivo">¿Por qué quieres aprender portugués brasileño?</label>
-                          <select name="motivo" id="motivo" class="form-control form-control-lg" required>
-                            <option value="turista">Turista</option>
-                            <option value="estudio_profesion">Estudio/Profesión</option>
-                            <option value="gustos">Por qué me gusta el idioma</option>
-                            <option value="otraRazon">Otra razón</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-check form-check-inline mb-4">
-                        <label class="form-check-label mr-4">Género:</label>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="genero" id="mujer" value="mujer" required />
-                          <label class="form-check-label" for="mujer">Mujer</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="genero" id="hombre" value="hombre" required />
-                          <label class="form-check-label" for="hombre">Hombre</label>
-                        </div>
-                      </div>
-
-                      <input type="submit" class="btn btn-formulario display-4" name="register" value="Enviar">
-                    </form>
-
-                    <p class="mt-5 text-center">Si quieres contactarnos o saber más sobre las clases, puedes escribirnos y con gusto te responderemos a cualquier duda.</p>
-                    <strong>Contáctanos por WhatsApp:</strong>
-                    <div class="text-center mt-5">
-                      <a href="https://wa.me/59176470508" class="btn btn-success" target="_blank">
-                        Enviar mensaje por WhatsApp
-                      </a>
+                    <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                      Oops...! Algo salió mal. Por favor, inténtalo de nuevo.
                     </div>
                   </div>
+                  <div class="card-body text-black">
+                    <h3 class="mb-5 text-center">¡Regístrate y aprende este hermoso idioma!</h3>
+
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <div class="form-outline">
+                          <label class="form-label" for="Nombres">Nombres</label>
+                          <input type="text" id="Nombres" name="Nombres" class="form-control form-control-lg"
+                            placeholder="Ingrese su nombre" required />
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-4">
+                        <div class="form-outline">
+                          <label class="form-label" for="Apellidos">Apellidos</label>
+                          <input type="text" id="Apellidos" name="Apellidos" class="form-control form-control-lg"
+                            placeholder="Ingrese sus apellidos" />
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-4">
+                        <div class="form-outline">
+                          <label class="form-label" for="edad">Fecha de Nacimiento</label>
+                          <input type="date" id="Fecha Nacimiento" name="Fecha Nacimiento"
+                            class="form-control form-control-lg" required />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="email">Correo Electrónico</label>
+                      <input type="Correo Electronico" id="Correo Electronico" name="Correo Electronico" class="form-control form-control-lg" required
+                        placeholder="Ingrese su correo Electrónico" />
+                    </div>
+
+                    <div class="row mb-4">
+                      <div class="col-md-12">
+                        <label class="form-label" for="Motivo">¿Por qué quieres aprender portugués brasileño?</label>
+                        <select name="Motivo" id="Motivo" class="form-control form-control-lg" required>
+                          <option value="turista">Turista</option>
+                          <option value="estudio_profesion">Estudio/Profesión</option>
+                          <option value="gustos">Por qué me gusta el idioma</option>
+                          <option value="otraRazon">Otra razón</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-check form-check-inline mb-4">
+                      <label class="form-check-label mr-4">Género:</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Genero" id="mujer" value="mujer" required />
+                        <label class="form-check-label" for="mujer">Mujer</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Genero" id="hombre" value="hombre"
+                          required />
+                        <label class="form-check-label" for="hombre">Hombre</label>
+                      </div>
+                    </div>
+
+                    <input type="submit" class="btn btn-formulario display-4" name="register" value="Enviar">
+                </form>
+
+                <p class="mt-5 text-center">Si quieres contactarnos o saber más sobre las clases, puedes escribirnos y
+                  con gusto te responderemos a cualquier duda.</p>
+                <strong>Contáctanos por WhatsApp:</strong>
+                <div class="text-center mt-5">
+                  <a href="https://wa.me/59176470508" class="btn btn-success" target="_blank">
+                    Enviar mensaje por WhatsApp
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    </div>
+  </section>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script>
+    document.getElementById("miFormulario").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      let datos = {
+        nombres: document.getElementById("nombres").value,
+        apellidos: document.getElementById("apellidos").value,
+        fechaNacimiento: document.getElementById("fechaNacimiento").value,
+        email: document.getElementById("email").value,
+        motivo: document.getElementById("motivo").value,
+        genero: document.querySelector('input[name="genero"]:checked').value
+      };
+      let formData = new URLSearchParams();
+      for (let key in datos) {
+        formData.append(key, datos[key]);
+      }
+
+      fetch("https://script.google.com/macros/s/AKfycbznbwOIANCAM0KIGTffmdfJDToakSgsI-KMbmX5tq5I6s8mwEBPrU9luEOfkgRdws/exec", {
+        method: "POST",
+        body: formData
+      })
+        .then(response => response.text())
+        .then(data => {
+          alert("Datos enviados correctamente");
+          document.getElementById("miFormulario").reset();
+        })
+        .catch(error => console.error("Error:", error));
+    });
+  </script>
+
+</body>
+
 </html>
